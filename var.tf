@@ -54,29 +54,29 @@ variable "scall_enable" {
   default = "true"
 }
 
-variable vpc_id {
-   default = "will be apply"
+variable "vpc_id" {
+  default = "will be apply"
 }
 
-variable subnet_id {
-   default = "will be apply"
+variable "subnet_id" {
+  default = "will be apply"
 }
 
 
 locals {
   eip = {
-      name           = "cce-apiserver-test"
-      type           = "5_bgp"
-      size           = "20"
-      share_type     = "PER"
-      charge_mode    = "traffic"
+    name        = "cce-apiserver-test"
+    type        = "5_bgp"
+    size        = "20"
+    share_type  = "PER"
+    charge_mode = "traffic"
   }
 }
 
 locals {
   node_count = {
-      initial = 2
-      min     = 1
-      max     = 2
+    initial = 2
+    min     = 1
+    max     = 2
   }
 }
